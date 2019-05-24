@@ -1,18 +1,18 @@
 body {
+    font-family: 'Muli', sans-serif;
 }
 
 header {
     height: 60vh;
-    padding: 50px;    color: whitesmoke;
-    font-family: 'Muli', sans-serif;
-    background: #92c7d6;
-    background-image: -webkit-radial-gradient(top, circle cover, #97d0e1, #1A9B7D 80%);
+    padding: 50px;    color: whitesmoke;    
+    background: #1A9B7D;
+    /* background-image: -webkit-radial-gradient(top, circle cover, #97d0e1, #1A9B7D 80%);
     background-image: -moz-radial-gradient(top, circle cover, #97d0e1, #1A9B7D 80%);
     background-image: -o-radial-gradient(top, circle cover, #97d0e1, #1A9B7D 80%);
-    background-image: radial-gradient(top, circle cover, #97d0e1, #1A9B7D 80%);
+    background-image: radial-gradient(top, circle cover, #97d0e1, #1A9B7D 80%); */
+    background-image: linear-gradient(to bottom right, #97d0e1, #1A9B7D);
 }
 
-  
 .hexagon {
     height: 260px;
     width: 300px;
@@ -30,8 +30,36 @@ header {
     border-color: #2A4C46 transparent;
     transform-origin: 75px 129.8px;
     transform: scale(.01);
-    transition: transform .3s;
+    transition: transform .5s ease-out;
     border-radius: 3px;
+}
+
+.hexagon .first-triangle {
+    transform: rotate(-50deg) scale(.01);
+}
+
+#twinkle {
+    height: 30px;
+    position: absolute;
+    top: 55px;
+    left: 85px;
+    transform: scale(.001);
+    opacity: 0;
+}
+
+@keyframes sparkle {
+    0% {
+        transform: rotate(180deg) scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: rotate(360deg) scale(3);
+    }
+
+    100% {
+        transform: rotate(540deg) scale(.01);
+    }
 }
 
 .p {
@@ -47,6 +75,7 @@ header {
 .title {
     margin-left: 300px;
     margin-top: -150px;
+    width: 775px;
 }
 
 .title h1 {
@@ -55,7 +84,9 @@ header {
 }
 
 .title h2 {
-    margin-left: 15px
+    margin-left: auto;
+    margin-right: 50px;
+    width: 342px;
 }
 
 em {
