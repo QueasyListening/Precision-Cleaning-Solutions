@@ -1,9 +1,12 @@
 body {
     font-family: 'Muli', sans-serif;
+    height: 200vh
 }
 
 header {
     height: 60vh;
+    width: 100%;
+    position: relative;
     padding: 50px;    color: whitesmoke;    
     background: #1A9B7D;
     /* background-image: -webkit-radial-gradient(top, circle cover, #97d0e1, #1A9B7D 80%);
@@ -11,6 +14,13 @@ header {
     background-image: -o-radial-gradient(top, circle cover, #97d0e1, #1A9B7D 80%);
     background-image: radial-gradient(top, circle cover, #97d0e1, #1A9B7D 80%); */
     background-image: linear-gradient(to bottom right, #97d0e1, #1A9B7D);
+    transition: all .2s ease-in-out;
+}
+
+.small-header {
+    padding: 15px;
+    height: 90px;
+    position: fixed;
 }
 
 .hexagon {
@@ -18,7 +28,8 @@ header {
     width: 300px;
     position: relative;
     transform-origin: 0 0;
-    transform: translateX(150px) rotate(30deg);
+    transform: rotate(30deg);
+    left: 150px;
 }
 
 .hexagon .triangle {
@@ -28,14 +39,25 @@ header {
     border-style: solid;
     border-width: 130px 75px 0;
     border-color: #2A4C46 transparent;
-    transform-origin: 75px 129.8px;
+    transform-origin: 75px 129px;
     transform: scale(.01);
-    transition: transform .5s ease-out;
+    transition: transform .5s ease-out, border-width .2s ease-in-out, transform-origin .2s ease-in-out;
     border-radius: 3px;
 }
 
 .hexagon .first-triangle {
     transform: rotate(-50deg) scale(.01);
+}
+
+.small-hex {
+    height: 52px;
+    width: 60px;
+    left: 35px;
+}
+
+.small-hex .small-triangle {
+    border-width: 26px 15px 0;
+    transform-origin: 15px 25px;
 }
 
 #twinkle {
@@ -72,6 +94,11 @@ header {
     transition: opacity 1s, transform 1s;
 }
 
+.small-p {
+    font-size: 173%;
+    left: 5px;
+}
+
 .title {
     margin-left: 300px;
     margin-top: -150px;
@@ -94,10 +121,12 @@ em {
 }
 
 nav {
-    position: relative;
-    bottom: 55px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
     background: transparent;
     color: whitesmoke;
+    transition: all .2s ease-in-out;
 }
 
 nav ul {

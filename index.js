@@ -23,3 +23,27 @@ window.addEventListener('load', () => {
         document.getElementById('twinkle').style.animation = 'sparkle 1.5s ease-in';
     }, 2350);
 });
+
+
+const scrollCheck = () => {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.querySelector('.hexagon').classList.add('small-hex');
+        Array.from(document.getElementsByClassName('triangle')).forEach(triangle => {
+            triangle.classList.add('small-triangle');
+        });
+        document.querySelector('.p').classList.add('small-p');
+        document.querySelector('header').classList.add('small-header');
+        document.querySelector('nav').style.bottom = '7px';
+        document.querySelector('.title').style.display = 'none';
+    } else {
+        document.querySelector('.hexagon').classList.remove('small-hex');
+        Array.from(document.getElementsByClassName('triangle')).forEach(triangle => {
+            triangle.classList.remove('small-triangle');
+        });
+        document.querySelector('.p').classList.remove('small-p');
+        document.querySelector('header').classList.remove('small-header');
+        document.querySelector('nav').style.bottom = '0px';
+        document.querySelector('.title').style.display = 'block';
+    }
+}
+window.onscroll = scrollCheck;
