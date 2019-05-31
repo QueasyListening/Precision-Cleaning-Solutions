@@ -8,11 +8,13 @@
     <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" type="text/css" href="index.css">
     <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Arimo&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
+    <header>    
+        <a href="tel:+1-443-600-9416" class="phone-number"><i class="fas fa-phone"></i>(443)600-9416</a>
         <div class="hexagon">
             <div class="triangle first-triangle"></div>
             <div class="triangle"></div>
@@ -29,13 +31,74 @@
         </div>
         <nav>
             <ul>
-                <li>Home</li>
-                <li>Services</li>
-                <li>Contact</li>
-                <li>About</li>
+                <li><a href="#welcome">Home</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
         </nav>
     </header>
+    <div class="header-spacer"></div>
+    <section id="welcome">
+        <h2><em>Commercial</em> and <em>Residential</em> Cleaning</h2>
+        
+        <img src="./images/cleaning-supplies.jpg" class="welcome-img"/>
+            <div class="services">
+                <h3>We offer:</h3> 
+                <ul>
+                    <li>Cleaning Service</li>
+                    <li>Cleaning Service</li>
+                    <li>Cleaning Service</li>
+                    <li>Cleaning Service</li>
+                    <li>Cleaning Service</li>
+                    <li>And much more!</li>
+                </ul>
+            </div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </section>
+    <section class="spacer">
+        <h2>"Expert Cleaning at an Affordable Price"</h2>
+    </section>
+    <section id="about">
+        <h2>A little about us...</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <img src="./images/lab.jpg"/>
+    </section>
+    <section class="spacer">
+        <h2>"Thorough and friendly service!"</h2>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name...">
+            <label for="email">E-mail</label>
+            <input type="text" id="email" name="email" placeholder="Your e-mail address...">
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" placeholder="Your phone number...">
+            <label for="message">Message</label>
+            <textarea type="text" id="message" name="message" placeholder="Your message..."></textarea>
+            <input type="submit" value="Submit">
+            
+        </form>
+    </section>
+    <footer>
+        <div class="info">
+            <a href="tel:+1-443-600-9416" class="phone-number"><i class="fas fa-phone"></i>(443)600-9416</a>
+            <a href="mailto:precisioncleaningsolutions@yahoo.com"><i class="far fa-envelope">PrecisionCleaningSolutions@yahoo.com</i></a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i>816 Silver Ave, Baltimore MD, 21221</a>
+        </div>
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter-square"></i></a>
+        </div>
+        <img src="./images/footer-img.png">
+    </footer>
 
 
   

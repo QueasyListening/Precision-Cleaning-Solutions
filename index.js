@@ -4,7 +4,6 @@ window.addEventListener('load', () => {
     triangles.forEach((triangle, i) => {
         if (i === 0) {
             triangle.style.transform = 'scale(1)';
-            // triangle.style.transform = 'rotate(0deg)';
         } else {
             window.setTimeout(() => {
                 triangle.style.transform = `rotate(${i*60}deg)`;
@@ -19,14 +18,13 @@ window.addEventListener('load', () => {
     }, 1250);
 
     window.setTimeout(() => {
-        console.log(document.getElementById('twinkle'));
         document.getElementById('twinkle').style.animation = 'sparkle 1.5s ease-in';
     }, 2350);
 });
 
 
 const scrollCheck = () => {
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    if (document.body.scrollTop > 440 || document.documentElement.scrollTop > 440) {
         document.querySelector('.hexagon').classList.add('small-hex');
         Array.from(document.getElementsByClassName('triangle')).forEach(triangle => {
             triangle.classList.add('small-triangle');
@@ -35,6 +33,7 @@ const scrollCheck = () => {
         document.querySelector('header').classList.add('small-header');
         document.querySelector('nav').style.bottom = '7px';
         document.querySelector('.title').style.display = 'none';
+        document.querySelector('.phone-number').classList.add('small-phone-number');
     } else {
         document.querySelector('.hexagon').classList.remove('small-hex');
         Array.from(document.getElementsByClassName('triangle')).forEach(triangle => {
@@ -44,6 +43,8 @@ const scrollCheck = () => {
         document.querySelector('header').classList.remove('small-header');
         document.querySelector('nav').style.bottom = '0px';
         document.querySelector('.title').style.display = 'block';
+        document.querySelector('.phone-number').classList.remove('small-phone-number');
+
     }
 }
 window.onscroll = scrollCheck;
