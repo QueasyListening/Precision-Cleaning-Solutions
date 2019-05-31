@@ -24,7 +24,7 @@ window.addEventListener('load', () => {
 
 
 const scrollCheck = () => {
-    if (document.body.scrollTop > 440 || document.documentElement.scrollTop > 440) {
+    if (document.body.scrollTop > window.innerHeight *.5 || document.documentElement.scrollTop > window.innerHeight * .5) {
         document.querySelector('.hexagon').classList.add('small-hex');
         Array.from(document.getElementsByClassName('triangle')).forEach(triangle => {
             triangle.classList.add('small-triangle');
