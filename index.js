@@ -24,14 +24,14 @@ window.addEventListener('load', () => {
 
 
 const scrollCheck = () => {
-    if (document.body.scrollTop > window.innerHeight *.5 || document.documentElement.scrollTop > window.innerHeight * .5) {
+    if (document.body.scrollTop > 380 || document.documentElement.scrollTop > 380) {
         document.querySelector('.hexagon').classList.add('small-hex');
         Array.from(document.getElementsByClassName('triangle')).forEach(triangle => {
             triangle.classList.add('small-triangle');
         });
         document.querySelector('.p').classList.add('small-p');
         document.querySelector('header').classList.add('small-header');
-        document.querySelector('nav').style.bottom = '7px';
+        document.querySelector('nav').style.bottom = '5px';
         document.querySelector('.title').style.display = 'none';
         document.querySelector('.phone-number').classList.add('small-phone-number');
     } else {
