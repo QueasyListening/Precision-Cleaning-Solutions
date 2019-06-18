@@ -444,15 +444,20 @@ footer .social {
 }
 
 @media(max-width: 685px) {
+    header {
+        padding: 50px 76px;
+    }
+
     header .phone-number {
         display:none;
     }
 
     .hexagon {
+        position: absolute;
         height: 52px;
         width: 60px;
-        left: 0px;
-        top: -30px;
+        left: 45px;
+        top: 18px;
     }
 
     .hexagon .triangle {
@@ -466,9 +471,14 @@ footer .social {
         top: unset;
     }
 
+    #twinkle {
+        top: -6px;
+        left: 17px;
+    }
+
     .title {
-        margin-top: -68px;
-        margin-left: 43px;
+        margin-top: -20px;
+        margin-left: 5px;
     }
 
     .title h1 {
@@ -506,7 +516,7 @@ footer .social {
 }
 
 @media(max-width: 497px) {
-    
+
 }
 
 
