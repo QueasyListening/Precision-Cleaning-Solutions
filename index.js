@@ -24,7 +24,7 @@ window.addEventListener('load', () => {
 
 
 const scrollCheck = () => {
-    if (document.body.scrollTop > 380 || document.documentElement.scrollTop > 380) {
+    if (window.innerWidth > 685 && (document.body.scrollTop > 380 || document.documentElement.scrollTop > 380)) {
         document.querySelector('.hexagon').classList.add('small-hex');
         Array.from(document.getElementsByClassName('triangle')).forEach(triangle => {
             triangle.classList.add('small-triangle');
@@ -47,4 +47,20 @@ const scrollCheck = () => {
 
     }
 }
+
 window.onscroll = scrollCheck;
+document.querySelector('.hamburger-btn').onclick = handleHamburgerClick;
+let menuIsOpen = false;
+function handleHamburgerClick() {
+    if (menuIsOpen){
+        document.querySelector('header').style.height = '111px';
+        document.querySelector('nav').style.opacity = 0;
+        document.querySelector('nav ul').style.height = '120px';
+        menuIsOpen = false;    
+    } else {
+        document.querySelector('header').style.height = '438px';
+        document.querySelector('nav').style.opacity = 1;
+        document.querySelector('nav ul').style.height = '290px';
+        menuIsOpen = true;
+    }
+}

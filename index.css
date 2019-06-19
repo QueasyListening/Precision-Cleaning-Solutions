@@ -155,7 +155,6 @@ header .fa-phone {
 
 .hamburger-btn {
     display: none;
-    padding: 6px;
     height: 47px;
     width: 47px;
     border-radius: 7px;
@@ -163,6 +162,7 @@ header .fa-phone {
     right: 25px;
     top: 28px;
     background-color: #2A4C46;
+    border: none;
 }
 
 .hamburger-btn span {
@@ -172,6 +172,8 @@ header .fa-phone {
     background-color: whitesmoke;
     display: block;
     margin-top: 7px;
+    position: relative;
+    top: -3px;
 }
 
 nav {
@@ -249,10 +251,6 @@ nav li:hover::after {
     margin: 10px;
 }
 
-/* #welcome p {
-    margin: 10px 20%;
-} */
-
 .spacer {
     display: flex;
     align-items: center;
@@ -278,7 +276,6 @@ nav li:hover::after {
 
 #about img {
     border-radius: 3px;
-    /* height: 225px; */
     width: 14%;
     margin-right: 25%;
     margin-left: 10px;
@@ -446,6 +443,13 @@ footer .social {
 @media(max-width: 685px) {
     header {
         padding: 50px 76px;
+        height: 111px;
+        position: fixed;
+        transition: height .9s ease-in-out;
+    }
+
+    .header-spacer {
+        height: 111px;
     }
 
     header .phone-number {
@@ -474,6 +478,16 @@ footer .social {
     #twinkle {
         top: -6px;
         left: 17px;
+    }
+
+    nav {
+        opacity: 0;
+        transition: opacity 1s;
+    }
+
+    nav ul {
+        height: 120px;
+        transition: height 1s ease-in-out;
     }
 
     .title {
