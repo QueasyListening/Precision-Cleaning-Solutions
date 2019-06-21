@@ -11,10 +11,14 @@
     <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Arimo&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Swanky+and+Moo+Moo&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>    
+    <div id="home"></div>    
+    <header>
         <a href="tel:+1-443-600-9416" class="phone-number"><i class="fas fa-phone"></i>(443)600-9416</a>
         <div class="hexagon">
             <div class="triangle first-triangle"></div>
@@ -28,16 +32,17 @@
         </div>
         <div class="title">
             <h1>Precision Cleaning Solutions&nbsp;LLC</h1>
-            <h2><em>You</em> make the messes and <em>We</em>&nbsp;clean&nbsp;them&nbsp;up</h2>
+            <!-- <h2><em>Don't stress!</em> We'll&nbsp;handle&nbsp;the&nbsp;<em>mess!</em></h2> -->
+            <h2>Don't stress! We'll&nbsp;handle&nbsp;the&nbsp;mess!</h2>
         </div>
-        <button onclick="handleHamburgerClick()" class="hamburger-btn">
+        <button class="hamburger-btn">
             <span></span>
             <span></span>
             <span></span>
         </button>
         <nav>
             <ul>
-                <li><a href="#welcome">Home</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#about">About</a></li>
@@ -45,10 +50,43 @@
         </nav>
     </header>
     <div class="header-spacer"></div>
+    <!-- Carousel -->
+    <div class="carousel-container">
+        <i class="far fa-arrow-alt-circle-left carousel-control"></i>
+        <div id="carousel">
+            <ul>
+                <li class="slide">
+                    <img src="./images/carousel/Stage 1.jpg" alt="Close up of a government building with columns"/>
+                </li>
+                <li class="slide">
+                    <img src="./images/carousel/Stage 2.jpg" alt="Sun setting on a large canyon"/>
+                </li>
+                <li class="slide">
+                    <img src="./images/carousel/Stage 3.jpg" alt="Black and white, blurry, top down view of a busy crosswalk"/>
+                </li>
+                <li class="slide">
+                    <img src="./images/carousel/Stage 4.jpg" alt="Fighter jet flying away"/>
+                </li>
+                <li class="slide slide-spacer">
+                    <img src="./images/carousel/Stage 5.jpg" alt="Fighter jet flying away"/>
+                </li>
+            </ul>
+            <div class="slide-indicators">
+                <div class="slide-indicator"></div>
+                <div class="slide-indicator"></div>
+                <div class="slide-indicator"></div>
+                <div class="slide-indicator"></div>
+                <div class="slide-indicator"></div>
+            </div>
+        </div>
+        <i class="far fa-arrow-alt-circle-right carousel-control"></i>
+    </div>
+    <!-- Carousel end -->
     <section id="welcome">
-        <h2><em>Commercial</em> and <em>Residential</em> Cleaning</h2>
+        <h2>We offer <em>Commercial</em> and <em>Residential</em> Cleaning</h2>
+        <h3>Liscenced, Bonded and Insured</h3>
         
-        <img src="./images/cleaning-supplies.jpg" class="welcome-img"/>
+        <img src="./images/cleaning_supplies.png" class="welcome-img"/>
             <div class="services">
                 <h3>We offer:</h3> 
                 <ul>
@@ -64,20 +102,22 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
     </section>
-    <section class="spacer">
+    <div class="spacer">
         <h2>"Expert Cleaning at an Affordable Price"</h2>
-    </section>
-    <section id="about">
+    </div>
+    <div id="about"></div>
+    <section class="about">
         <h2>A little about us...</h2>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
         <img src="./images/lab.jpg"/>
     </section>
-    <section class="spacer">
+    <div class="spacer">
         <h2>"Thorough and friendly service!"</h2>
-    </section>
-    <section id="contact">
+    </div>
+    <div id="contact"></div>
+    <section class="contact">
         <h2>Contact Us</h2>
         <form>
             <label for="name">Name</label>
@@ -95,7 +135,7 @@
     <footer>
         <div class="info">
             <a href="tel:+1-443-600-9416" class="phone-number"><i class="fas fa-phone"></i>(443)600-9416</a>
-            <a href="mailto:precisioncleaningsolutions@yahoo.com"><i class="far fa-envelope">PrecisionCleaningSolutions@yahoo.com</i></a>
+            <a href="mailto:precisioncleaningsolutions@yahoo.com"><i class="far fa-envelope">&nbsp;PrecisionCleaningSolutions@yahoo.com</i></a>
             <a href="#"><i class="fas fa-map-marker-alt"></i>816 Silver Ave, Baltimore MD, 21221</a>
         </div>
         <div class="social">
