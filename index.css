@@ -257,6 +257,7 @@ nav li:hover::after {
 
 /* carousel Slide */
 #carousel .slide {
+    width: 100%;
     list-style: none;
     position: absolute;
     -webkit-transition: -webkit-transform 1s ease-out;

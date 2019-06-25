@@ -153,7 +153,7 @@ const slideBackward = () => {
 
 // funtion for positioning the slides from an ordered slides array
 const positionSlides = () => {
-    slideWidth = carousel.getBoundingClientRect().width + 11; // the extra 11 accounts fot the border
+    slideWidth = carousel.getBoundingClientRect().width; 
     const lastSlide = slides.length - 1;
 
     // set the new last slide to the viewable position
@@ -161,16 +161,17 @@ const positionSlides = () => {
     slides[lastSlide].style.webkitTransform = "unset";
     slides[lastSlide].style.transform = "unset";
 
+    // All transforms have 6 pixels added to the to account for the 5px border around the carousel
     // set the new second to last slide to the right translated position
-    slides[lastSlide - 1].style.msTransform = `translateX(${slideWidth}px)`;
-    slides[lastSlide - 1].style.webkitTransform = `translateX(${slideWidth}px)`;
-    slides[lastSlide - 1].style.transform = `translateX(${slideWidth}px)`;
+    slides[lastSlide - 1].style.msTransform = `translateX(${slideWidth+6}px)`;
+    slides[lastSlide - 1].style.webkitTransform = `translateX(${slideWidth+6}px)`;
+    slides[lastSlide - 1].style.transform = `translateX(${slideWidth+6}px)`;
 
     // set the remaining slides to the left translated position
     for (let i = 0; i < lastSlide - 1; i++) {
-        slides[i].style.msTransform = `translateX(-${slideWidth}px)`;
-        slides[i].style.webkitTransform = `translateX(-${slideWidth}px)`;
-        slides[i].style.transform = `translateX(-${slideWidth}px)`;
+        slides[i].style.msTransform = `translateX(-${slideWidth+6}px)`;
+        slides[i].style.webkitTransform = `translateX(-${slideWidth+6}px)`;
+        slides[i].style.transform = `translateX(-${slideWidth+6}px)`;
     };
 };
 
