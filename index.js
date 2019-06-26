@@ -59,12 +59,16 @@ Array.from(document.querySelectorAll('nav ul li a')).forEach(link => {
 document.querySelector('.hamburger-btn').onclick = handleHamburgerClick;
 let menuIsOpen = false;
 function handleHamburgerClick() {
+    console.log(menuIsOpen);
     if (menuIsOpen){
         closeMenu();    
     } else {
         document.querySelector('header').style.height = '438px';
         document.querySelector('nav').style.opacity = 1;
         document.querySelector('nav ul').style.height = '290px';
+        document.querySelectorAll('nav ul li').forEach(item => {
+          item.style.height = '75px';  
+        })
         menuIsOpen = true;
     }
 }
@@ -73,7 +77,10 @@ function closeMenu() {
     if (window.innerWidth < 685) {
         document.querySelector('header').style.height = '111px';
         document.querySelector('nav').style.opacity = 0;
-        document.querySelector('nav ul').style.height = '120px';
+        document.querySelector('nav ul').style.height = '0px';
+        document.querySelectorAll('nav ul li').forEach(item => {
+            item.style.height = '0px';
+        });
         menuIsOpen = false;  
     }
 }

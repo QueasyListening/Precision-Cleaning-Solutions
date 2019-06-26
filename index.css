@@ -1,6 +1,8 @@
 /**** Colors used
    Light green: #1A9B7D
    darkgreen: #2A4C46
+   Jet: #343434
+   Prussion blue: #0b3954
 ****/ 
 
 html {
@@ -9,6 +11,19 @@ html {
 
 body {
     font-family: 'Oswald', sans-serif;
+    color: #343434;
+    background-color: snow;
+}
+
+p {
+    line-height: 1.3;
+    color: #676767;
+    font-family: 'Arimo', sans-serif;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
 }
 
 /* header and nav */
@@ -27,11 +42,6 @@ header {
 
 .header-spacer {
     height: 470px;
-}
-
-header a {
-    text-decoration: none;
-    color: whitesmoke
 }
 
 .small-header {
@@ -153,6 +163,7 @@ header .fa-phone {
     margin-left: 100px;
     font-family: 'Swanky and Moo Moo', cursive;
     font-size: 175%;
+    color: #0b3954;
 }
 
 .title em {
@@ -188,7 +199,7 @@ nav {
     right: 0px;
     background: transparent;
     color: whitesmoke;
-    transition: all .2s ease-in-out;
+    transition: all .2s ease-in .2s;
 }
 
 nav ul {
@@ -313,13 +324,12 @@ nav li:hover::after {
     font-size: 300%;
     text-align: center;
     margin: 60px 0 40px 0;
-    color: #1A9B7D;
 }
 
 #welcome em {
     font-weight: bold;
     text-decoration: underline;
-    color: #2A4C46;
+    color: #1A9B7D;
 }
 
 #welcome img {
@@ -339,7 +349,6 @@ nav li:hover::after {
     font-size: 200%;
     text-align: center;
     margin-bottom: 40px;
-    color: #1A9B7D;
 }
 
 #welcome .services h3 {
@@ -349,7 +358,12 @@ nav li:hover::after {
 
 #welcome ul {
     list-style: inside;
-    padding: 20px;
+    margin-top: 15px;
+    padding: 5px 20px;
+    color: #343434;
+    box-shadow: 1px 1px 2px;
+    border-radius: 4px;
+    border: 1px solid #343434;
 }
 
 #welcome li {
@@ -358,6 +372,10 @@ nav li:hover::after {
 
 #welcome p {
     margin-top: 25px;
+}
+
+#welcome a {
+    color:#0b3954;
 }
 
 .spacer {
@@ -450,7 +468,7 @@ footer {
 }
 
 footer .info {
-    width: 30%;
+    width: 363px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -468,6 +486,15 @@ footer .info {
 
 .info i {
     margin-right: 10px;
+}
+
+.info .fa-map-marker-alt {
+    margin-left: 2px;
+    margin-right: 8px;
+}
+
+.info .fa-phone {
+    margin-right: 13px;
 }
 
 footer img {
@@ -503,6 +530,10 @@ footer .social {
 
     .info a {
         font-size: 100%;
+    }
+
+    footer .info {
+        width: 274px;
     }
 
     footer .social {
@@ -648,12 +679,8 @@ footer .social {
 
     nav {
         opacity: 0;
-        transition: opacity 1s;
-    }
-
-    nav ul {
-        height: 120px;
-        transition: height 1s ease-in-out;
+        transition: opacity .9s linear;
+        
     }
 
     .title {
@@ -682,17 +709,19 @@ footer .social {
     nav ul {
         flex-direction: column;
         align-items: center;
-        height: 290px;
+        height: 0px;
         margin-top: 30px;
         margin-left: 0;
         margin-right: 0;
         width: 100%;
+        transition: height .9s ease-in-out;
     }
 
     nav ul li {
         display: block;
-        height: 45px;
+        height: 0px;
         font-size: 200%;
+        transition: height .9s ease-in-out;
     }
 
     #welcome img {
