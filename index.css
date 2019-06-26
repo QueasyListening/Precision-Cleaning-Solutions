@@ -177,7 +177,7 @@ header .fa-phone {
     border-radius: 7px;
     position: absolute;
     right: 25px;
-    top: 28px;
+    top: 24px;
     background-color: #2A4C46;
     border: none;
 }
@@ -407,7 +407,6 @@ nav li:hover::after {
 .about img {
     border-radius: 3px;
     width: 14%;
-    margin-right: 25%;
     margin-left: 10px;
 }
 
@@ -610,6 +609,15 @@ footer .social {
         font-size: 181%;
     }
 
+    .about p {
+        width: 51%;
+        margin-left: 90px;
+    }
+
+    .about img {
+        width: 23%;
+    }
+
     footer {
         flex-direction: column;
         justify-content: space-around;
@@ -755,6 +763,16 @@ footer .social {
         font-size: 100%;
     }
 
+    .about p {
+        width: 90%;
+        margin: 20px 5%;
+    }
+
+    .about img {
+        width: 90%;
+        margin: 10px 5%;
+    }
+
     .contact h2 {
         font-size: 182%;
     }
@@ -778,6 +796,12 @@ footer .social {
         height: unset;
         width: 60%;
         margin: 0 auto;
+    }
+}
+
+@media(max-width: 340px) {
+    .title h2 {
+        display: none;
     }
 }
 
