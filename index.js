@@ -159,8 +159,7 @@ const slideBackward = () => {
 
 // funtion for positioning the slides from an ordered slides array
 const positionSlides = () => {
-    slideWidth = Math.round(carousel.getElementsByClassName("slide")[0].getBoundingClientRect().width) +1; 
-    console.log(slideWidth);
+    slideWidth = Math.round(carousel.getElementsByClassName("slide")[0].getBoundingClientRect().width); 
     const lastSlide = slides.length - 1;
 
     // set the new last slide to the viewable position
@@ -186,15 +185,11 @@ const positionSlides = () => {
 const setActiveSlideIndicator = () => {
     slideIndicators.forEach((triangle, i) => {
         if (activeIndicatorIndex === i) {
-            triangle.style.msTransform = "rotate(-90deg)";
-            triangle.style.webkitTransform = "rotate(-90deg)";
-            triangle.style.transform = "rotate(-90deg)";
-            triangle.style.borderLeft = "6px solid #1A9B7D"
+            triangle.style.backgroundColor = "#1A9B7D";
+            triangle.style.opacity = "1";
         } else {
-            triangle.style.msTransform = "";
-            triangle.style.webkitTransform = "";
-            triangle.style.transform = "";
-            triangle.style.borderLeft = "6px solid white";
+            triangle.style.backgroundColor = "whitesmoke";
+            triangle.style.opacity = ".5";
         };
     });
 };
