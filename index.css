@@ -275,12 +275,23 @@ nav li:hover::after {
     transition: -webkit-transform 1s ease-out, transform 1s ease-out;
 }
 
+#carousel .slide-label-top {
+    position: absolute;
+    top: 13%;
+    left: 13%;
+    width: 275px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 10px;
+    opacity: .9;
+}
+
 #carousel .slide-spacer {
     position: relative;
 }
 
 #carousel .slide img {
-    width: 102%;
+    width: 100%;
     height: auto;
     vertical-align: top;
 }
@@ -431,7 +442,7 @@ input[type=text], select, textarea {
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
-    resize: vertical;
+    resize: none;
 }
 
 textarea {
@@ -746,6 +757,14 @@ footer .social {
         font-size: 65%;
     }
 
+    #carousel {
+        width: 100%;
+    }
+
+    .carousel-control {
+        display: none !important;
+    }
+
     #welcome img {
         width: 90%;
     }
@@ -771,6 +790,11 @@ footer .social {
     .about img {
         width: 90%;
         margin: 10px 5%;
+    }
+
+    .contact {
+        margin: 160px 20px;
+        padding: 20px;
     }
 
     .contact h2 {
