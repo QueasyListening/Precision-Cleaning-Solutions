@@ -94,7 +94,7 @@ let transitionCompleted = true;
 // transition time in seconds for sped up slide change for pagination click transition
 const fastTransition = .3;
 // delay between slides on the carousel
-const carouselDelay = 12000;
+const carouselDelay = 8000;
 
 // Function Definitions
 // function for advancing the carousel forwards
@@ -272,4 +272,4 @@ positionSlides();
 setActiveSlideIndicator(); 
 
 // start timer to advance the carousel on a regular interval
-//let carouselTimer = window.setInterval(slideForward, carouselDelay); 
+let carouselTimer = window.setInterval(slideForward, carouselDelay); 
