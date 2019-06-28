@@ -530,7 +530,7 @@ input[type=submit]:hover {
 }
 
 footer {
-    height: 260px;
+    
     background-color: rgb(101, 192, 176);
     border-radius: 4px 4px 0 0;
     color: whitesmoke;
@@ -570,7 +570,7 @@ footer .info {
 }
 
 footer img {
-    height: 260px;
+    height: 200px;
     margin-top: -23px;
 }
 
@@ -628,6 +628,10 @@ footer .social {
 
     .social a {
         font-size: 217%;
+    }
+
+    .footer img {
+        margin-top: -45px;
     }
 
 
@@ -713,6 +717,8 @@ footer .social {
         flex-direction: column;
         justify-content: space-around;
         position: relative;
+        margin-bottom: 80px;
+        height: 260px;
     }
 
     footer .info {
@@ -907,6 +913,7 @@ footer .social {
     footer {
         height: unset;
         padding: 30px;
+        margin-bottom: 45px;
     }
 
     footer .info {
@@ -921,7 +928,7 @@ footer .social {
     footer img {
         position: static;
         height: unset;
-        width: 60%;
+        width: 40%;
         margin: 0 auto;
     }
 }
